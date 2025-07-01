@@ -1,5 +1,5 @@
 // Zadatak 1
-let f = function (N) {
+function f(N) {
     return N * 2
 };
 console.log(f(15));
