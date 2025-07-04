@@ -3,16 +3,20 @@ var colors = ["white", "green", "red", "blue", "black"];
 function text(boje) {
   return `The memory of that scene for me is like a frame of film forever frozen at that moment: the ${boje[2]} carpet, the ${boje[1]} lawn, the ${boje[0]} house, the leaden sky. The new president and his first lady. - Richard M. Nixon`;
 }
-console.log(text(colors));
+const result1 = text(colors);
+console.log(result1);
 
 // Zadatak 2
 let colors2 = ["white", "green", "red", "blue", "black"];
-function nizBoja(boje) {
-  for (const boja of boje) {
-    console.log(boja);
+function nizBoja(arr) {
+  let stringForDisplay = "";
+  for (const boja of arr) {
+    stringForDisplay += boja + "\n";
   }
+  return stringForDisplay;
 }
-nizBoja(colors2);
+const result2 = nizBoja(colors2);
+console.log(result2);
 
 // Zadatak 3
 let meseci2 = [
@@ -36,13 +40,15 @@ let months = (meseci) => {
   }
   return stringForDisp;
 };
-console.log(months(meseci2));
+const result3 = months(meseci2);
+console.log(result3);
 
 // Zadatak 4
 let nizA = [12, 134, 14, 54, 76, 75, 6, 4];
 let nizB = [23, 64, 70, 93, 72, 63];
 let nizovi = (arrA, arrB) => (arrA.length > arrB.length ? arrA : arrB);
-console.log(nizovi(nizA, nizB));
+const result4 = nizovi(nizA, nizB);
+console.log(result4);
 
 // Zadatak 5
 let niz = [12, 42, 32, 94, 63, 38];
@@ -53,7 +59,8 @@ let elementiNiza2 = (niz) => {
   }
   return stringForDisplay;
 };
-console.log(elementiNiza2(niz));
+const result5 = elementiNiza2(niz);
+console.log(result5);
 
 // Zadatak 6
 let nizbir = [32, 41, 13, 88, 99, 38];
@@ -65,7 +72,8 @@ function dodatJedan(arr) {
   }
   return stringForDysplay;
 }
-console.log(dodatJedan(nizbir));
+const result6 = dodatJedan(nizbir);
+console.log(result6);
 
 // Zadatak 7
 let nizduplo = [10, 20, 25, 35, 45, 50];
@@ -77,7 +85,8 @@ function dupliraj(arr) {
   }
   return stringForDisplay;
 }
-console.log(dupliraj(nizduplo));
+const result7 = dupliraj(nizduplo);
+console.log(result7);
 
 //Zadatak 8
 let nizreverse = [23, 45, 27, 93, 26, 43];
@@ -88,7 +97,8 @@ function obrnutNiz(arr) {
   }
   return stringForDisplay;
 }
-console.log(obrnutNiz(nizreverse));
+const result8 = obrnutNiz(nizreverse);
+console.log(result8);
 
 //Zadatak 9
 let niz2 = [23, 45, 27, 93, 26, 43];
@@ -101,7 +111,8 @@ function svakiDrugiElem(arr) {
   }
   return stringForDisplay;
 }
-console.log(svakiDrugiElem(niz2));
+const result9 = svakiDrugiElem(niz2);
+console.log(result9);
 
 // Zadatak 10
 let nizsuma = [24, 45, 27, 93, 26, 43];
@@ -112,7 +123,8 @@ function sum(niz) {
   }
   return suma;
 }
-console.log(sum(nizsuma));
+const result10 = sum(nizsuma);
+console.log(result10);
 
 // Zadatak 11
 let nizsrvr = [24, 45, 27, 93, 26, 43];
@@ -123,7 +135,8 @@ let srvr = function (niz) {
   }
   return niz2;
 };
-console.log(srvr(nizsrvr));
+const result11 = srvr(nizsrvr);
+console.log(result11);
 
 // Zadatak 12
 let capitals = [
@@ -140,7 +153,8 @@ function gradovi(arr) {
   }
   return stringForDisplay;
 }
-console.log(gradovi(capitals));
+const result12 = gradovi(capitals);
+console.log(result12);
 
 // Zadatak 13
 let prirodniBrojevi = [];
@@ -151,7 +165,8 @@ function prBrojevi(arr) {
   }
   return rezNiz;
 }
-console.log(prBrojevi(prirodniBrojevi));
+const result13 = prBrojevi(prirodniBrojevi);
+console.log(result13);
 
 // Zadatak 14
 let parni = [];
@@ -159,7 +174,7 @@ let neparni = [];
 function parniNeparni() {
   for (let i = 1; i <= 100; i++) i % 2 === 0 ? parni.push(i) : neparni.push(i);
 }
-parniNeparni();
+const result14 = parniNeparni();
 console.log(parni);
 console.log(neparni);
 
@@ -171,7 +186,8 @@ function izmedju(x, y) {
   for (i = x; i <= y; i++) n.push(i);
   return n;
 }
-console.log(izmedju(a, b));
+const result15 = izmedju(a, b);
+console.log(result15);
 
 // Zadatak 16
 let arr = [12, 43, 63, 13, 94, 48, 27, 55];
@@ -181,7 +197,8 @@ function proveraElementa(niz, a) {
     if (a == niz[i]) return "Broj se nalazi u nizu";
   }
 }
-console.log(proveraElementa(arr, numA));
+const result16 = proveraElementa(arr, numA);
+console.log(result16);
 
 // Zadatak 17
 let arr2 = [12, 43, 63, 13, 94, 48, 27, 55];
@@ -194,8 +211,9 @@ function najveci(n) {
   }
   return ne;
 }
+const result17 = najveci(arr2);
 console.log(Math.max(...arr2));
-console.log(najveci(arr2));
+console.log(result17);
 
 // Zadatak 18
 let a1 = [10, 20, 30, 40, 50, 60, 70, 80];
@@ -208,7 +226,8 @@ function zbirElemNizova(arr1, arr2) {
   }
   return stringForDisplay;
 }
-console.log(zbirElemNizova(a1, b1));
+const result18 = zbirElemNizova(a1, b1);
+console.log(result18);
 
 // Zadatak 19
 let kljuc = [
@@ -231,7 +250,8 @@ function objekat(arr1, arr2) {
   }
   return podaci;
 }
-console.log(objekat(kljuc, element));
+const result19 = objekat(kljuc, element);
+console.log(result19);
 
 // Zadatak 20
 let meseci = [
@@ -258,4 +278,5 @@ function meseciIDani(arr) {
   }
   return stringForDisplay;
 }
-console.log(meseciIDani(meseci));
+const result20 = meseciIDani(meseci);
+console.log(result20);
